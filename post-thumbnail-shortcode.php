@@ -20,7 +20,7 @@ function post_thumbnail_shortcode($content = null){
         if ( $the_query->have_posts() ) {
 
             // Get Recent Post
-            $args = array( 'numberposts' => '1', 'post_type' => 'what_student_matter' );
+            $args = array( 'numberposts' => '1', 'post_type' => 'what_student_matter', 'post_status' => 'publish' );
             $recent_posts = wp_get_recent_posts( $args );
 
             //echo '<ul>';
